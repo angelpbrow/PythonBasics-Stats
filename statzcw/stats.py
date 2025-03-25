@@ -14,7 +14,15 @@ def zmode(data: List[float]) -> float:
 
 
 def zmedian(data: List[float]) -> float:
-    return len(data) / 2
+    data.sort()
+    if len(data) % 2 == 0:
+        med1 = data[len(data) // 2]
+        med2 = data[len(data)// 2 - 1]
+        median = (med1 + med2) / 2
+    else:
+        median = data[len(data)//2]
+
+    return median
 
 
 def zvariance(data: List[float]) -> float:
