@@ -10,11 +10,12 @@ def zmean(data: List[float]) -> float:
 
 
 def zmode(data: List[float]) -> float:
-    # for nums in data:
-    #    if nums == nums:
-    #        most_nums.append(nums)
-    # return most_nums
-    pass
+    y = 0.0
+    #for an index in data--if a is not in y
+    for a in data:
+        y.setdefault(a,0)
+        y[a]+=1
+    return y
 
 
 
